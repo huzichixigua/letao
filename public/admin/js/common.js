@@ -17,7 +17,6 @@ $(function () {
        setTimeout(function(){
             NProgress.done();
        },1000)
-       console.log(2);
         
     })
     // 退出
