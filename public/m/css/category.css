@@ -1,0 +1,57 @@
+.main {
+    height: 100%;
+}
+
+.main .left {
+    width: 90px;
+    height: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .left li a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+.main .left li.now a {
+    background-color: pink;
+}
+
+.main .right{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main .right li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+.main .right li img {
+    width: 62px;
+    height: 62px;
+    /* margin: 0 auto; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

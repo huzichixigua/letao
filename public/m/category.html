@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类页</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+    <header class="header">
+        <a class="left mui-icon mui-icon-back" href="javascript:history.go(-1);"></a>
+        <h4>乐淘分类</h4>
+        <a class="right fa fa-search" href="search.html"></a>
+    </header>
+    <div class="main">
+        <div class="left">
+            <div class="mui-scroll-wrapper">
+                <ul class="mui-scroll first-category">
+
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="mui-scroll-wrapper">
+                <ul class="mui-scroll second-category">
+                   
+                    
+                </ul>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <footer class="footer">
+        <ul class="mui-clearfix">
+            <li>
+                <a href="index.html">
+                    <span class="fa fa-home"></span>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li class="now">
+                <a href="category.html">
+                    <span class="fa fa-bars"></span>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <span class="fa fa-shopping-cart"></span>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <span class="fa fa-user"></span>
+                    <p>会员中心</p>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script type="text/html" id="tpl1">
+        
+        {{each rows v i}}
+        {{if i === 0}}
+        <li data-id="{{v.id}}" class="now">
+            <a href="#">{{v.categoryName}}</a>
+        </li>
+        {{else}}
+        <li data-id="{{v.id}}">
+            <a href="#">{{v.categoryName}}</a>
+        </li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="tpl2">
+        {{each rows v i }}
+        <li><a href="javascript:;">
+                <img src="{{v.brandLogo}}" alt="">
+                <p>{{v.brandName}}</p>
+        </a></li>
+        {{/each}}
+    </script>  
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+
+</html>

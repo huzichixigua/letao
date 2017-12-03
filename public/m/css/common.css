@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    background-color: #fff;
+}
+.red {
+    color: red;
+}
+.through {
+    text-decoration: line-through
+}
+.header {
+    height: 45px;
+    width: 100%;
+    background-color: #069;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+.header h4 {
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+}
+.header a {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 45px;
+}
+.header .left {
+    left: 0;
+    color: #fff;
+}
+.header .right {
+    right: 0;
+    color: #fff;
+}
+.main .nav {
+    padding:10px;
+}
+.main .nav li{
+    float: left;
+    width: 33.33%;
+}
+.main .nav li img {
+    display: block;
+    width: 100%;
+}
+.main .goods {
+    padding: 20px 10px;
+    background-color: #fff;
+}
+.main .goods li{
+    float: left;
+    width: 48%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+    padding:10px;
+}
+.main .goods li:nth-child(odd) {
+    margin-right: 4%;
+}
+.main .goods li img {
+    display: block;
+    width: 100%;
+}
+.footer {
+    height: 55px;
+    width: 100%;
+    background-color: #069;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+}
+.footer li {
+    width: 25%;
+    height: 55px;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    overflow: hidden;
+}
+.footer li.now a {
+    color: darkorange;
+}
+.footer li.now p {
+    color: darkorange;
+}
+.footer a {
+    color: #fff;
+}
+.footer a p {
+    color: #fff;
+}

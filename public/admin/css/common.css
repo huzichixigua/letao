@@ -55,6 +55,7 @@ aside {
     top: 0;
     left: 0;
     transition: all .5s;
+    z-index: 2;
 }
 
 aside.active {
@@ -132,7 +133,7 @@ article .topbar {
     height: 50px;
     width: 100%;
     background-color: #3c8dbc;
-    padding: 0 20px;
+    padding: 0 20px 0 200px;
     line-height: 50px;
 }
 
