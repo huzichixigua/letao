@@ -5,50 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>分类页</title>
+    <title>购物车</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/cart.css">
 </head>
 
 <body>
     <header class="header">
-        <a class="left mui-icon mui-icon-back" href="javascript:history.go(-1);"></a>
-        <h4>乐淘分类</h4>
+        <a class="left fa fa-home" href="index.html"></a>
+        <h4>购物车</h4>
         <a class="right fa fa-search" href="search.html"></a>
     </header>
     <div class="main">
-        <div class="left">
-            <div class="mui-scroll-wrapper">
-                <ul class="mui-scroll first-category">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul>
 
                 </ul>
             </div>
         </div>
-        <div class="right">
-            <div class="mui-scroll-wrapper">
-                <ul class="mui-scroll second-category">
-                   
-                    
-                </ul>
-            </div>
-        </div>
-
-
-
-
+    </div>
+    <div class="total">
+        <span class="red">订单总金额 ¥<span class="money"></span></span>
+        <span class="order mui-pull-right">生成订单</span>
     </div>
     <footer class="footer">
         <ul class="mui-clearfix">
-            <li>
+            <li class="now">
                 <a href="index.html">
                     <span class="fa fa-home"></span>
                     <p>首页</p>
                 </a>
             </li>
-            <li class="now">
+            <li>
                 <a href="category.html">
                     <span class="fa fa-bars"></span>
                     <p>分类</p>
@@ -68,38 +60,28 @@
             </li>
         </ul>
     </footer>
-    <script type="text/html" id="tpl1">
-        
-        {{each rows v i}}
-        {{if i === 0}}
-        <li data-id="{{v.id}}" class="now">
-            <a href="#">{{v.categoryName}}</a>
-        </li>
-        {{else}}
-        <li data-id="{{v.id}}">
-            <a href="#">{{v.categoryName}}</a>
-        </li>
-        {{/if}}
-        {{/each}}
+    <script type="text/html" id="tpl"> 
+    {{each list v i}}
+    <li class="mui-clearfix">
+        <div class="pic mui-pull-left">
+            <img src="{{v.pic[0].picAddr}}" alt="">
+        </div>
+        <div class="info">
+            <p class="mui-ellipsis-2">{{v.proName}}</p>
+            <p class="price"><span class="red">{{v.price}}</span><span class="through">{{v.oldPrice}}</span><span class="mui-pull-right">{{v.num}}双</span></p>
+            <p class="size">鞋码：{{v.size}}</p>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" data-price="{{v.price}}" data-num="{{v.num}}">
+        </div>
+    </li>
+    {{/each}}
     </script>
-
-    <script type="text/html" id="tpl2">
-        {{if rows.length === 0}}
-        <div class="tips">该分类目前没有商品</div>    
-        {{/if}}
-        {{each rows v i }}
-        <li><a href="javascript:;">
-                <img src="{{v.brandLogo}}" alt="">
-                <p>{{v.brandName}}</p>
-        </a></li>
-        {{/each}}
-    </script>  
-    <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
-
     <script src="./js/common.js"></script>
-    <script src="./js/category.js"></script>
+    <script src="./js/cart.js"></script>
 </body>
 
 </html>

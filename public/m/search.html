@@ -5,34 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>分类页</title>
+    <title>搜索页</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 
 <body>
     <header class="header">
         <a class="left mui-icon mui-icon-back" href="javascript:history.go(-1);"></a>
-        <h4>乐淘分类</h4>
-        <a class="right fa fa-search" href="search.html"></a>
+        <h4>搜索中心</h4>
+        <!-- <a class="right fa fa-search" href="search.html"></a> -->
     </header>
     <div class="main">
-        <div class="left">
-            <div class="mui-scroll-wrapper">
-                <ul class="mui-scroll first-category">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="search">
+                    <input type="text" placeholder="请输入搜索关键字">
+                    <button class="mui-btn mui-btn-primary">搜索</button>
+                </div>
+                <div class="history">
+                </div>
 
-                </ul>
-            </div>
-        </div>
-        <div class="right">
-            <div class="mui-scroll-wrapper">
-                <ul class="mui-scroll second-category">
-                   
-                    
-                </ul>
+
             </div>
         </div>
 
@@ -48,7 +45,7 @@
                     <p>首页</p>
                 </a>
             </li>
-            <li class="now">
+            <li>
                 <a href="category.html">
                     <span class="fa fa-bars"></span>
                     <p>分类</p>
@@ -69,37 +66,32 @@
         </ul>
     </footer>
     <script type="text/html" id="tpl1">
-        
-        {{each rows v i}}
-        {{if i === 0}}
-        <li data-id="{{v.id}}" class="now">
-            <a href="#">{{v.categoryName}}</a>
-        </li>
-        {{else}}
-        <li data-id="{{v.id}}">
-            <a href="#">{{v.categoryName}}</a>
-        </li>
-        {{/if}}
-        {{/each}}
-    </script>
 
-    <script type="text/html" id="tpl2">
-        {{if rows.length === 0}}
-        <div class="tips">该分类目前没有商品</div>    
-        {{/if}}
-        {{each rows v i }}
-        <li><a href="javascript:;">
-                <img src="{{v.brandLogo}}" alt="">
-                <p>{{v.brandName}}</p>
-        </a></li>
-        {{/each}}
-    </script>  
+        <div class="topbar mui-clearfix">
+            <span class="mui-pull-left">搜索历史</span>
+            <span class="mui-pull-right fa fa-trash empty">清空记录</span>
+        </div>
+        <div class="content">
+            <ul>
+                {{each list v i }}
+                <li>
+                    <a href="javascript:;">{{v}}</a>
+                    <span data-index="{{i}}" class="mui-icon mui-icon-closeempty mui-pull-right delete"></span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+
+
+
+
+
+    </script>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
-
     <script src="./js/common.js"></script>
-    <script src="./js/category.js"></script>
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

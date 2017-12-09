@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.main li {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.pic {
+    padding: 10px;
+}
+.pic img{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+.info {
+    overflow: hidden;
+    padding: 10px;
+}
+.proname {
+    height: 42px;
+    color: #000;
+}
+.checkbox {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.total {
+    height: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 55px;
+    padding-left:10px;
+}
+.red {
+    font-size: 12px;
+}
+.order {
+    background-color: red;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 12px;
+}
